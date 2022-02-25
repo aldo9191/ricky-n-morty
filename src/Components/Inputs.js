@@ -7,20 +7,20 @@ export const StyledSearchBox = styled.input`
 `;
 
 export const StyledFilterBox = styled.select`
-  border: 1px solid #333;
+  border: 1px solid #888;
   border-radius: 5px;
   padding: 10px;
+  background-color: white;
 `;
 export const SearchBox = () => {
   return <StyledSearchBox type="text" placeholder="enter a name..." />;
 };
 
 export const FilterBox = (props) => {
-  let data = [{ name: "Alive" }, { name: "Dead" }, { name: "Unkonwn" }];
   return (
     <StyledFilterBox>
-      {data.map((option) => (
-        <option key={option.name}>{option.name}</option>
+      {props.data.map((option) => (
+        <option key={option}>{option}</option>
       ))}
     </StyledFilterBox>
   );
