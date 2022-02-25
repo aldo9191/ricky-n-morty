@@ -29,10 +29,14 @@ export const Characters = () => {
     
     // fetchData().catch(console.error)
 
-    (async() =>{
-      let newData = await getCharacters()
-      setData(newData)
-    })()
+    // (async() =>{
+    //   let newData = await getCharacters()
+    //   setData(newData)
+    // })()
+
+    getCharacters()
+    .then(data => setData(data))
+    .catch(console.error)
   },[])
 
 
