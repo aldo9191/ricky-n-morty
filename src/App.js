@@ -11,7 +11,6 @@ function App() {
     <div>
       <Router>
         <Navbar />
-        <Card />
         <Switch>
           <Route path="/characters/">
             <Characters />
