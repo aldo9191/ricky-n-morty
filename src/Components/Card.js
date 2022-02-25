@@ -24,13 +24,13 @@ export const TextSection = styled.div`
   padding: 20px;
 `;
 
-export const Card = () => {
+export const Card = (props) => {
   return (
     <StyledCard>
-      <Avatar src={avatar} alt="avatar" />
+      <Avatar src={props.image} alt="avatar" />
       <TextSection>
-        <h2>Rick Sanchez</h2>
-        <p>Human</p>
+        <h2>{props.name}</h2>
+        <p>{props.species}</p>
       </TextSection>
     </StyledCard>
   );

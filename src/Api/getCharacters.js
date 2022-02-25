@@ -5,7 +5,8 @@ export const getCharacters = async () => {
   try {
     let response = await fetch(base_url + endpoint);
     let data = await response.json();
-    console.log(data);
+    console.log(data)
+    return data;
   } catch (error) {
     console.log(error);
   }

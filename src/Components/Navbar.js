@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link, Router } from "react-router-dom";
 import logo from "./UI/rick_logo.png";
-import styles from "../App.css";
+// import styles from "../App.css";
 
 export const NavContainer = styled.div`
   width: 100%;
