@@ -16,7 +16,10 @@ export const Characters = () => {
   let statusList = ["Alive", "Dead", "Zombie"];
   let genderList = ["Male", "Female", "Genderless"];
 
-  let [data, setData] = useState([]);
+  let [data, setData] = useState(() => {
+    let start = JSON.parse(localStorage.getItem("characters"));
+    return start || [];
+  });
 
   useEffect(() => {
     // const fetchData = async ()=>{
@@ -33,7 +36,10 @@ export const Characters = () => {
     // })()
 
     getCharacters()
-      .then((data) => setData(data))
+      .then((data) => {
+        setData(data);
+        localStorage.setItem("characters", JSON.stringify(data));
+      })
       .catch(console.error);
   }, []);
 
